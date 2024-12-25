@@ -1,0 +1,44 @@
+{
+  "name": "set-default-options",
+  "version": "1.0.0",
+  "description": "Utility function to merge default options with user-defined ones",
+  "homepage": "https://github.com/ruggeryiury/set-default-options#readme",
+  "repository": "github:ruggeryiury/set-default-options",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Ruggery Iury Corrêa <ruggeryiury@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "javascript",
+    "javascript-library",
+    "node",
+    "nodejs",
+    "nodejs-modules",
+    "typescript",
+    "typescript-library",
+    "utility"
+  ],
+  "scripts": {
+    "build": "pnpm run clear && tsc --project ./prod.tsconfig.json",
+    "clear": "rimraf dist",
+    "dev": "tsx watch ./tests/exec.ts",
+    "format": "prettier --write src",
+    "lint": "eslint src"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^9.17.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.1",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.2"
+  }
+}
