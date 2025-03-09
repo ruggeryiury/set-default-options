@@ -1,7 +1,7 @@
 {
   "name": "set-default-options",
   "version": "1.0.0",
-  "description": "Utility function to merge default options with user-defined ones",
+  "description": "Utility function to merge default options with user-defined ones.",
   "homepage": "https://github.com/ruggeryiury/set-default-options#readme",
   "repository": "github:ruggeryiury/set-default-options",
   "type": "module",
@@ -18,7 +18,8 @@
     "nodejs-modules",
     "typescript",
     "typescript-library",
-    "utility"
+    "utility",
+    "utility-function"
   ],
   "scripts": {
     "build": "pnpm run clear && tsc --project ./prod.tsconfig.json",
