@@ -2,8 +2,7 @@ import eslint from '@eslint/js'
 import tseslint from 'typescript-eslint'
 import jsdoc from 'eslint-plugin-jsdoc'
 
-/** @type {import('typescript-eslint').ConfigWithExtends} */
-const tseslintConfig = {
+export default tseslint.config({
   languageOptions: {
     parser: tseslint.parser,
     sourceType: 'module',
@@ -17,8 +16,10 @@ const tseslintConfig = {
     jsdoc: jsdoc,
   },
   extends: [eslint.configs.recommended, ...tseslint.configs.strictTypeChecked, ...tseslint.configs.stylisticTypeChecked, jsdoc.configs['flat/recommended']],
-  ignores: ['tests/**/*.ts', 'dist/**/*', 'src-old/**/*'],
+  ignores: ['tests/**/*.ts', 'dist/**/*'],
   rules: {
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/non-nullable-type-assertion-style': 'warn',
     '@typescript-eslint/no-dynamic-delete': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
@@ -27,6 +28,4 @@ const tseslintConfig = {
     'jsdoc/require-returns-description': 'off',
     'jsdoc/valid-types': 'off',
   },
-}
-
-export default tseslint.config(tseslintConfig)
+})

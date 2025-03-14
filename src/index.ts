@@ -7,7 +7,18 @@
  */
 const setDefaultOptions = <T>(defaultOptions: Required<NonNullable<T>>, userOptions?: Partial<T>): Required<NonNullable<T>> => {
   if (!userOptions) return defaultOptions
-  return { ...defaultOptions, ...userOptions }
+
+  const loopObjVariables = (o: Record<string, any>): Record<string, any> => {
+    const newO: Record<string, any> = {}
+    for (const key of Object.keys(o)) {
+      if (typeof o[key] === 'object') newO[key] = loopObjVariables(o[key])
+      else newO[key] = o[key]
+    }
+
+    return newO
+  }
+
+  return { ...defaultOptions, ...loopObjVariables(userOptions) }
 }
 
 export default setDefaultOptions
