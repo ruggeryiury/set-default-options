@@ -2,14 +2,14 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig({
   entry: ['src/index.ts'],
-  format: ['cjs', 'esm'],
+  format: ['esm'],
   splitting: false,
   clean: true,
   dts: true,
   target: 'es2020',
   platform: 'browser',
   outDir: 'dist',
-  bundle: true,
+  bundle: false,
   treeshake: true,
   tsconfig: './prod.tsconfig.json',
   esbuildOptions(options) {
@@ -17,9 +17,5 @@ export default defineConfig({
       js: '"use strict";',
     }
   },
-  outExtension({ format }) {
-    return {
-      js: format === 'esm' ? '.mjs' : '.cjs',
-    }
-  },
+  outExtension: () => ({ js: '' }),
 })
