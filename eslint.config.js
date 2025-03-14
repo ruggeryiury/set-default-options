@@ -19,6 +19,7 @@ export default tseslint.config({
   ignores: ['tests/**/*.ts', 'dist/**/*'],
   rules: {
     '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/non-nullable-type-assertion-style': 'warn',
     '@typescript-eslint/no-dynamic-delete': 'off',

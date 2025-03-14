@@ -11,7 +11,6 @@ export default defineConfig({
   outDir: 'dist',
   bundle: true,
   treeshake: true,
-  // metafile: true,
   tsconfig: './prod.tsconfig.json',
   esbuildOptions(options) {
     options.banner = {
