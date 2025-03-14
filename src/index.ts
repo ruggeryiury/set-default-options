@@ -1,4 +1,4 @@
-import { type RequiredDeep } from 'type-fest'
+import type { RequiredDeep } from 'type-fest'
 
 /**
  * Iterates the provided `object` to append the values from this key, and return the files appended.
