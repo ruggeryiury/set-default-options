@@ -1,4 +1,4 @@
-import type { RequiredDeep } from 'type-fest'
+import type { PartialDeep, RequiredDeep } from 'type-fest'
 
 /**
  * Iterates the provided `object` to append the values from this key, and return the files appended.
@@ -25,7 +25,7 @@ export const iterateObjKeysAndAppendValues = (object: Record<string, any>, defau
  * @param {Partial<T> | undefined} userOptions `OPTIONAL` User-provided options with properties to override any default option property. If `undefined` or an empty object, no default properties will be merged.
  * @returns {RequiredDeep<T>} The default options merged with given user options.
  */
-export const setDefaultOptions = <T>(defaultOptions: RequiredDeep<T>, userOptions?: Partial<T>): RequiredDeep<T> => {
+export const setDefaultOptions = <T>(defaultOptions: RequiredDeep<T>, userOptions?: PartialDeep<T>): RequiredDeep<T> => {
   if (!userOptions) return defaultOptions
   return iterateObjKeysAndAppendValues(userOptions, defaultOptions as Record<string, any>) as RequiredDeep<T>
 }
