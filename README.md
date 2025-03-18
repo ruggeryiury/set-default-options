@@ -61,6 +61,6 @@ console.log(opts.option2) // 'example2'
 ## `setDefaultOptions<T>()`
 
 - Parameters:
-  - **defaultOptions** `Required<NonNullable<T>>` — The default options of the function.
-  - **userOptions**_?_ `Partial<T> | undefined` — `OPTIONAL` User-provided options with properties to override any default option property. If `undefined` or an empty object, no default properties will be merged.
-- Returns: `Required<NonNullable<T>>`
+  - **defaultOptions** `RequiredDeep<T>` — The default options of the function.
+  - **userOptions**_?_ `PartialDeep<T> | undefined` — `OPTIONAL` User-provided options with properties to override any default option property. If `undefined` or an empty object, no default properties will be merged.
+- Returns: `RequiredDeep<T>`
