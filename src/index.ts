@@ -7,15 +7,19 @@ import type { PartialDeep, RequiredDeep } from 'type-fest'
  * @param {Record<string, any>} defaultValues The default values of the object.
  * @returns {Record<string, any>}
  */
-export const iterateObjKeysAndAppendValues = (object: Record<string, any>, defaultValues: Record<string, any>): Record<string, any> => {
-  const newO: Record<string, any> = { ...defaultValues }
+export const iterateObjKeysAndAppendValues = (object: Record<string, any> | undefined, defaultValues: Record<string, any>): Record<string, any> => {
+  if (!object) return defaultValues
 
+  const newObject: Record<string, any> = { ...defaultValues }
   for (const key of Object.keys(object)) {
-    if (typeof object[key] === 'object') newO[key] = iterateObjKeysAndAppendValues(object[key], defaultValues[key])
-    else newO[key] = object[key]
+    if (typeof object[key] === 'object') {
+      if (object[key] === null) newObject[key] = object[key]
+      else if (Array.isArray(object[key])) newObject[key] = object[key]
+      else newObject[key] = iterateObjKeysAndAppendValues(object[key], defaultValues[key])
+    } else newObject[key] = object[key]
   }
 
-  return newO
+  return newObject
 }
 
 /**

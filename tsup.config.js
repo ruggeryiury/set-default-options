@@ -6,7 +6,7 @@ export default defineConfig({
   splitting: false,
   clean: true,
   dts: true,
-  target: 'es6',
+  target: 'es2020',
   platform: 'neutral',
   outDir: 'dist',
   bundle: false,

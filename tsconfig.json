@@ -3,7 +3,7 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "ES6",
+    "target": "ES2020",
     "allowJs": true,
     "resolveJsonModule": true,
     "noImplicitOverride": true,
@@ -11,7 +11,7 @@
     "outDir": "dist",
     "declaration": true,
     "sourceMap": true,
-    "lib": ["ES6"],
+    "lib": ["DOM", "ES2020"],
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": true
   },
