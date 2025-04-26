@@ -22,8 +22,7 @@
     "utility-function"
   ],
   "scripts": {
-    "build": "pnpm run clear && tsc --project ./prod.tsconfig.json",
-    "build:tsup": "tsup",
+    "build": "tsup",
     "clear": "rimraf dist",
     "dev": "tsx watch ./tests/exec.ts",
     "format": "prettier --write src",
@@ -37,16 +36,15 @@
     }
   },
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
-    "@swc/core": "^1.11.9",
-    "eslint": "^9.17.0",
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsdoc": "^50.6.1",
+    "eslint-plugin-jsdoc": "^50.6.11",
     "prettier": "^3.5.3",
     "tsup": "^8.4.0",
-    "tsx": "^4.19.2",
-    "type-fest": "^4.37.0",
-    "typescript": "^5.7.2",
-    "typescript-eslint": "^8.18.2"
+    "tsx": "^4.19.3",
+    "type-fest": "^4.40.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.0"
   }
 }

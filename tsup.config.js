@@ -16,5 +16,5 @@ export default defineConfig({
   esbuildOptions: (options) => {
     options.banner = { js: '"use strict";' }
   },
-  outExtension: ({ format }) => ({ js: format === 'cjs' ? '.cjs' : '.js' }),
+  outExtension: ({ format }) => ({ js: format === 'cjs' ? '.cjs' : '' }),
 })
