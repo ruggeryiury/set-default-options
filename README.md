@@ -8,8 +8,6 @@
 </div>
 
 - [About](#about)
-- [API](#api)
-  - [`setDefaultOptions<T>()`](#setdefaultoptionst)
 
 # About
 
@@ -55,12 +53,3 @@ const opts = returnOpts({ options2: 'example2' })
 console.log(opts.option1) // 'example'
 console.log(opts.option2) // 'example2'
 ```
-
-# API
-
-## `setDefaultOptions<T>()`
-
-- Parameters:
-  - **defaultOptions** `RequiredDeep<T>` — The default options of the function.
-  - **userOptions**_?_ `PartialDeep<T> | undefined` — `OPTIONAL` User-provided options with properties to override any default option property. If `undefined` or an empty object, no default properties will be merged.
-- Returns: `RequiredDeep<T>`
