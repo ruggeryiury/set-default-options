@@ -23,10 +23,6 @@ export default tseslint.config({
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/non-nullable-type-assertion-style': 'warn',
     '@typescript-eslint/no-dynamic-delete': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-extraneous-class': 'off',
-    'jsdoc/no-undefined-types': 'off',
     'jsdoc/require-returns-description': 'off',
-    'jsdoc/valid-types': 'off',
   },
 })

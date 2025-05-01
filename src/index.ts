@@ -25,11 +25,12 @@ export const iterateObjKeysAndAppendValues = (object: Record<string, any> | unde
 /**
  * Utility function to merge default options with user-defined ones.
  * - - - -
+ * @template {Record<string, any>} T
  * @param {RequiredDeep<T>} defaultOptions The default options of the function.
  * @param {Partial<T> | undefined} userOptions `OPTIONAL` User-provided options with properties to override any default option property. If `undefined` or an empty object, no default properties will be merged.
  * @returns {RequiredDeep<T>} The default options merged with given user options.
  */
-export const setDefaultOptions = <T>(defaultOptions: RequiredDeep<T>, userOptions?: PartialDeep<T>): RequiredDeep<T> => {
+export const setDefaultOptions = <T extends Record<string, any>>(defaultOptions: RequiredDeep<T>, userOptions?: PartialDeep<T>): RequiredDeep<T> => {
   if (!userOptions) return defaultOptions
   return iterateObjKeysAndAppendValues(userOptions, defaultOptions as Record<string, any>) as RequiredDeep<T>
 }
