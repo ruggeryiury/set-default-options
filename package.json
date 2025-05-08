@@ -1,6 +1,6 @@
 {
   "name": "set-default-options",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility function to merge default options with user-defined ones.",
   "homepage": "https://github.com/ruggeryiury/set-default-options#readme",
   "repository": "github:ruggeryiury/set-default-options",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
+    "@types/node": "^22.15.15",
     "eslint": "^9.26.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsdoc": "^50.6.11",

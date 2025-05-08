@@ -14,6 +14,7 @@ export const iterateObjKeysAndAppendValues = (object: Record<string, any> | unde
   for (const key of Object.keys(object)) {
     if (typeof object[key] === 'object') {
       if (object[key] === null) newObject[key] = object[key]
+      else if (typeof globalThis.Buffer !== 'undefined' && Buffer.isBuffer(object[key])) newObject[key] = object[key]
       else if (Array.isArray(object[key])) newObject[key] = object[key]
       else newObject[key] = iterateObjKeysAndAppendValues(object[key], defaultValues[key])
     } else newObject[key] = object[key]
