@@ -24,7 +24,7 @@
   "scripts": {
     "build": "tsup",
     "clear": "rimraf dist",
-    "dev": "tsx watch ./tests/exec.ts",
+    "dev": "tsx watch ./dev/main.ts",
     "format": "prettier --write src",
     "lint": "eslint src"
   },

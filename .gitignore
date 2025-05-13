@@ -1,4 +1,5 @@
 node_modules/
+dev/
 dist/
 tests/
 pnpm-lock.yaml

@@ -13,7 +13,7 @@ export default defineConfig({
   treeshake: true,
   minify: true,
   tsconfig: './prod.tsconfig.json',
-  sourcemap: true,
+  sourcemap: 'inline',
   esbuildOptions: (options) => {
     options.banner = { js: '"use strict";' }
   },
