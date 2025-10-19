@@ -3,17 +3,18 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "ES2020",
-    "allowJs": true,
+    "target": "ESNext",
+    "module": "ESNext",
     "resolveJsonModule": true,
     "noImplicitOverride": true,
     "moduleResolution": "bundler",
     "outDir": "dist",
     "declaration": true,
     "sourceMap": true,
-    "lib": ["DOM", "ES2020"],
+    "lib": ["ESNext"],
     "forceConsistentCasingInFileNames": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "isolatedDeclarations": true
   },
   "include": ["src/**/*.ts", "dev/**/*.ts", "tests/**/*.ts"],
   "exclude": ["node_modules"]
