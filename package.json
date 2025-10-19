@@ -23,7 +23,7 @@
     "utility-function"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "clear": "rimraf dist",
     "dev": "tsx watch ./dev/main.ts",
     "format": "prettier --write src",
